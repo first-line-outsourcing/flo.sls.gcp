@@ -22,14 +22,8 @@ package:
     - node_modules/**
     - .gitignore
     - .git/**
-webpack:
-  webpackConfig: 'webpack.config.js' # Name of webpack configuration file
-  includeModules:
-    packagePath: 'package.json'
-  packager: 'npm' # Packager that will be used to package your external modules
-
 functions:
-  first:
+  api:
     handler: http
     events:
       - http: path
