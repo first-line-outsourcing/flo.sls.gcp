@@ -1,0 +1,39 @@
+{
+  "name": "andrew-test",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npm-watch local",
+    "local": "functions-framework --port=4000 --target=http",
+    "webpack:watch": "webpack --watch",
+    "webpack:build": "webpack",
+    "dev": "npm run webpack:watch & npm run watch"
+  },
+  "author": "serverless.com",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv-webpack": "^1.7.0",
+    "npm-watch": "^0.6.0",
+    "serverless": "^1.70.0",
+    "serverless-google-cloudfunctions": "*",
+    "ts-loader": "^7.0.3",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "tslint": "^6.1.2",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.8.3",
+    "typings": "^2.1.1",
+    "webpack": "^4.43.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@types/node": "^13.13.5",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.19"
+  },
+  "watch": {
+    "local": "index.js"
+  }
+}
