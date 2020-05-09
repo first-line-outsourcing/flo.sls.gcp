@@ -16,6 +16,7 @@ webpack plugin for Serverless function.
 Make sure you read whole documentation from the [Serverless Framework website](https://www.serverless.com/framework/docs/providers/google/) for further development.
 
 ## Difference with AWS
+
 GCP has totally different serverless architecture than AWS. Is uses just one function as entry point
 because GCP does not have API Gateway.
 The API should be built from this point manually. The core concept is a basic Express server.
@@ -62,6 +63,7 @@ This mechanism is a stage sensitive for deployment. You need to add files for ea
 `.env.{stage}` Example `.env.prod`
 
 ##Useful links
+
 - [Serverless Docs Google](https://www.serverless.com/framework/docs/providers/google/)
 - [Functions Framework for Node.js](https://github.com/GoogleCloudPlatform/functions-framework-nodejs)
 - [Functions as a Service Demo](https://github.com/googlesamples/functions-as-a-service)
