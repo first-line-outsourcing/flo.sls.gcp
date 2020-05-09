@@ -12,6 +12,7 @@ jspm_packages
 .serverless/
 kms_key.yml
 .env
+.env.*
 **/.env
 **/api/**.js
 .nyc_output/

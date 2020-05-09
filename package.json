@@ -1,21 +1,43 @@
 {
-  "name": "andrew-test",
-  "version": "0.1.0",
-  "description": "",
+  "name": "template-sls-gcp",
+  "version": "1.0.0",
+  "description": "Serverless API for your application with GCP",
   "main": ".webpack/service/index.js",
   "scripts": {
+    "deploy:dev": "sls deploy --stage dev",
+    "deploy:prod": "sls deploy --stage prod",
+    "deploy:local": "npm run webpack:watch & npm run watch",
+    "build": "sls webpack",
     "watch": "npm-watch local",
     "local": "npx @google-cloud/functions-framework --port=4000 --target=http",
     "webpack:watch": "webpack --watch",
-    "webpack:build": "webpack",
-    "dev": "npm run webpack:watch & npm run watch",
-    "deploy": "serverless deploy -s prod"
+    "lint": "tslint --project tsconfig.json \"**/*.ts\"",
+    "test": "jest --watchAll --colors --coverage"
   },
-  "author": "serverless.com",
-  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/first-line-outsourcing/flo.sls.gcp"
+  },
+  "author": "First Line Outsourcing",
+  "contributors": [
+    {
+      "name": "Andrey Zaikin",
+      "email": "azaikin@flo.team",
+      "url": "https://github.com/zaikin-andrew"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/first-line-outsourcing/flo.sls.gcp/issues"
+  },
+  "homepage": "https://github.com/first-line-outsourcing/flo.sls.gcp#readme",
   "devDependencies": {
     "@google-cloud/functions-framework": "^1.5.1",
     "@types/express": "^4.17.6",
+    "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.7.0",
     "express": "^4.17.1",
     "npm-watch": "^0.6.0",
@@ -38,7 +60,6 @@
   "dependencies": {
     "@types/node": "^13.13.5",
     "axios": "^0.19.2",
-    "dotenv": "^8.2.0",
     "reflect-metadata": "^0.1.13",
     "source-map-support": "^0.5.19"
   },

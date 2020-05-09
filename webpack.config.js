@@ -35,6 +35,8 @@ module.exports = {
     plugins: [new TsconfigPathsPlugin.TsconfigPathsPlugin({ configFile: path.resolve(__dirname, './tsconfig.json') })],
   },
   plugins: [
-    new Dotenv()
+    new Dotenv({
+      path: slsw.lib.options ? `./.env.${slsw.lib.options.stage}` : './.env'
+    })
   ],
 };

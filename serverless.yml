@@ -11,7 +11,6 @@ provider:
   #
   # the path to the credentials file needs to be absolute
   credentials: ~/.gcloud/win-keyfile-andrew.json
-
 custom:
   webpack:
     webpackConfig: 'webpack.config.js' # Name of webpack configuration file
