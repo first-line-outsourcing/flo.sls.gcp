@@ -9,7 +9,7 @@
     "webpack:watch": "webpack --watch",
     "webpack:build": "webpack",
     "dev": "npm run webpack:watch & npm run watch",
-    "deploy": "npm run webpack:build && serverless deploy"
+    "deploy": "serverless deploy -s prod"
   },
   "author": "serverless.com",
   "license": "MIT",
