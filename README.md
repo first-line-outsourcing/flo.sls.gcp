@@ -62,7 +62,7 @@ NAME=flo-api
 This mechanism is a stage sensitive for deployment. You need to add files for each stage with the next schema:
 `.env.{stage}` Example `.env.prod`
 
-##Useful links
+## Useful links
 
 - [Serverless Docs Google](https://www.serverless.com/framework/docs/providers/google/)
 - [Functions Framework for Node.js](https://github.com/GoogleCloudPlatform/functions-framework-nodejs)
