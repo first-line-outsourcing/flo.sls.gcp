@@ -60,7 +60,7 @@ NAME=flo-api
  to the index.js. You will not find it in the result file, but it will work in runtime.
  
 This mechanism is a stage sensitive for deployment. You need to add files for each stage with the next schema:
-`.env.{stage}` Example `.env.prod`
+`.env.{stage}`. Example `.env.prod`
 
 ## Useful links
 
@@ -68,3 +68,6 @@ This mechanism is a stage sensitive for deployment. You need to add files for ea
 - [Functions Framework for Node.js](https://github.com/GoogleCloudPlatform/functions-framework-nodejs)
 - [Functions as a Service Demo](https://github.com/googlesamples/functions-as-a-service)
 - [How to get credentials](https://www.serverless.com/framework/docs/providers/google/guide/credentials/)
+- [Firebase Local Emulator](https://firebase.google.com/docs/emulator-suite)
+- [Firebase Streams](https://firebase.google.com/docs/database/rest/retrieve-data#section-rest-streaming)
+- [Get realtime updates with Cloud Firestore](https://firebase.google.com/docs/firestore/query-data/listen#node.js)
