@@ -12,7 +12,15 @@ provider:
   # the path to the credentials file needs to be absolute
   credentials: ~/.gcloud/win-keyfile-andrew.json
 
+custom:
+  webpack:
+    webpackConfig: 'webpack.config.js' # Name of webpack configuration file
+    includeModules:
+      packagePath: 'package.json'
+    packager: 'npm' # Packager that will be used to package your external modules
+
 plugins:
+  - serverless-webpack
   - serverless-google-cloudfunctions
 
 # needs more granular excluding in production as only the serverless provider npm

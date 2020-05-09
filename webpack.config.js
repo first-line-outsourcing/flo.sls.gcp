@@ -2,12 +2,16 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const slsw = require('serverless-webpack');
+const destPath = path.join(__dirname, '.webpack');
+
+console.log(slsw.lib.options.stage)
 
 module.exports = {
   entry: ['source-map-install.js','index.ts'],
   output: {
     libraryTarget: 'commonjs',
-    path: __dirname,
+    path: process.env.NODE_ENV !== 'prod' ? __dirname : destPath,
     filename: 'index.js',
   },
   target: 'node',

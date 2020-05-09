@@ -2,7 +2,7 @@
   "name": "andrew-test",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": ".webpack/service/index.js",
   "scripts": {
     "watch": "npm-watch local",
     "local": "npx @google-cloud/functions-framework --port=4000 --target=http",
@@ -22,6 +22,7 @@
     "semver": "^7.3.2",
     "serverless": "^1.70.0",
     "serverless-google-cloudfunctions": "^3.0.0",
+    "serverless-webpack": "^5.3.2",
     "strip-bom": "^4.0.0",
     "ts-loader": "^7.0.3",
     "tsconfig-paths": "^3.9.0",
