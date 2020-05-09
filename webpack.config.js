@@ -5,13 +5,11 @@ const Dotenv = require('dotenv-webpack');
 const slsw = require('serverless-webpack');
 const destPath = path.join(__dirname, '.webpack');
 
-console.log(slsw.lib.options.stage)
-
 module.exports = {
   entry: ['source-map-install.js','index.ts'],
   output: {
     libraryTarget: 'commonjs',
-    path: process.env.NODE_ENV !== 'prod' ? __dirname : destPath,
+    path: slsw.lib.options ? destPath : __dirname,
     filename: 'index.js',
   },
   target: 'node',
@@ -19,7 +17,7 @@ module.exports = {
     __dirname: false,
     __filename: false,
   },
-  mode: process.env.NODE_ENV !== 'prod' ? 'development' : 'production',
+  mode: slsw.lib.options ? 'production' : 'development',
   // we use webpack-node-externals to excludes all node deps.
   // You can manually set the externals too.
   externals: [nodeExternals({ modulesDir: path.resolve(__dirname, './node_modules') })],
