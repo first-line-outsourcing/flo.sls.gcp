@@ -1,16 +1,16 @@
-service: andrew-test
+service: template-sls-gcp
 
 provider:
   name: google
   stage: dev
-  runtime: nodejs10
+  runtime: nodejs10 # 10 is the latest engine for now
   region: us-central1
-  project: flo-test-276619
+  project: project-name-gcp
   # The GCF credentials can be a little tricky to set up. Luckily we've documented this for you here:
   # https://serverless.com/framework/docs/providers/google/guide/credentials/
   #
   # the path to the credentials file needs to be absolute
-  credentials: ~/.gcloud/win-keyfile-andrew.json
+  credentials: ~/.gcloud/keyfile.json
 custom:
   webpack:
     webpackConfig: 'webpack.config.js' # Name of webpack configuration file
