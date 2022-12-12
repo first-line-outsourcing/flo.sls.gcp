@@ -39,7 +39,7 @@
     "@types/express": "^4.17.6",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.7.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "npm-watch": "^0.6.0",
     "semver": "^7.3.2",
     "serverless": "^1.70.0",
